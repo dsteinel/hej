@@ -1,0 +1,22 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+/* line 3, ../scss/typography.scss */
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 1.3em;
+}
+
+/* line 9, ../scss/typography.scss */
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 2.3em;
+  text-align: center;
+}
+
+/* line 16, ../scss/typography.scss */
+h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 2em;
+}

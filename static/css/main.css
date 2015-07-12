@@ -1,0 +1,70 @@
+/* line 3, ../scss/main.scss */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 8, ../scss/main.scss */
+html {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 14, ../scss/main.scss */
+body {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 19, ../scss/main.scss */
+.header {
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100vh;
+}
+/* line 25, ../scss/main.scss */
+.header > div {
+  position: absolute;
+  width: 50%;
+  top: 36vh;
+  right: 0;
+}
+/* line 32, ../scss/main.scss */
+.header h1,
+.header h2 {
+  text-transform: uppercase;
+  text-align: left;
+  color: #FFF;
+}
+/* line 39, ../scss/main.scss */
+.header img {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  width: 100vw;
+  height: auto;
+}
+
+/* line 48, ../scss/main.scss */
+.container {
+  position: relative;
+  max-width: 100vw;
+  top: 90vh;
+  padding: 60px;
+  background-color: white;
+}
+/* line 55, ../scss/main.scss */
+.container > img {
+  display: inline-block;
+  max-width: 25%;
+}
+
+/* line 61, ../scss/main.scss */
+.description {
+  display: inline-block;
+  max-width: 960px;
+  margin: 0 auto;
+  width: 90%;
+}
