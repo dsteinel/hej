@@ -1,0 +1,25 @@
+/* line 1, ../scss/background-transition.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 3, ../scss/background-transition.scss */
+body {
+  transition: background 1s ease;
+}
+
+/* line 9, ../scss/background-transition.scss */
+.slide .inside {
+  display: table;
+  height: 100%;
+  width: 100%;
+  padding: 0 3em;
+}
+/* line 15, ../scss/background-transition.scss */
+.slide .inside p {
+  display: table-cell;
+  width: 100%;
+  clear: both;
+  vertical-align: middle;
+  text-align: center;
+}

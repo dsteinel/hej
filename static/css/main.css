@@ -1,44 +1,49 @@
-/* line 3, ../scss/main.scss */
+/* line 2, ../scss/main.scss */
 * {
   margin: 0;
   padding: 0;
 }
 
-/* line 8, ../scss/main.scss */
+/* line 7, ../scss/main.scss */
 html {
   position: relative;
   height: 100%;
   width: 100%;
 }
 
-/* line 14, ../scss/main.scss */
+/* line 13, ../scss/main.scss */
 body {
   width: 100%;
   height: 100%;
 }
 
-/* line 19, ../scss/main.scss */
+/* line 18, ../scss/main.scss */
+h1 {
+  width: 100%;
+}
+
+/* line 22, ../scss/main.scss */
 .header {
   position: fixed;
   display: block;
   width: 100%;
   height: 100vh;
 }
-/* line 25, ../scss/main.scss */
+/* line 28, ../scss/main.scss */
 .header > div {
   position: absolute;
   width: 50%;
   top: 36vh;
   right: 0;
 }
-/* line 32, ../scss/main.scss */
+/* line 35, ../scss/main.scss */
 .header h1,
 .header h2 {
   text-transform: uppercase;
   text-align: left;
   color: #FFF;
 }
-/* line 39, ../scss/main.scss */
+/* line 42, ../scss/main.scss */
 .header img {
   position: relative;
   display: block;
@@ -47,24 +52,16 @@ body {
   height: auto;
 }
 
-/* line 48, ../scss/main.scss */
-.container {
+/* line 51, ../scss/main.scss */
+.container--start {
   position: relative;
-  max-width: 100vw;
+  width: 100%;
   top: 90vh;
   padding: 60px;
   background-color: white;
 }
-/* line 55, ../scss/main.scss */
-.container > img {
-  display: inline-block;
+/* line 58, ../scss/main.scss */
+.container--start > img {
+  display: inline-flex;
   max-width: 25%;
-}
-
-/* line 61, ../scss/main.scss */
-.description {
-  display: inline-block;
-  max-width: 960px;
-  margin: 0 auto;
-  width: 90%;
 }
