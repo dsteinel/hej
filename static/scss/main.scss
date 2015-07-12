@@ -15,10 +15,6 @@ body {
 	height: 100%;
 }
 
-h1 {
-	width: 100%;
-}
-
 .header {
 	position: fixed;
 	display: block;
@@ -26,10 +22,9 @@ h1 {
 	height: 100vh;
 
 	> div {
-		position: absolute;
-		width: 50%;
-		top: 36vh;
-		right: 0;
+		position: relative;
+		bottom: 20%;
+		left: 50%;
 	}
 
 	h1,
@@ -37,6 +32,10 @@ h1 {
 		text-transform: uppercase;
 		text-align: left;
 		color: #FFF;
+
+		&:after {
+			display: none;
+		}
 	}
 
 	img {
@@ -48,19 +47,59 @@ h1 {
 	}
 }
 
-.container--start {
+.main-container {
 	position: relative;
-	width: 100%;
+	@include grid(12);
 	top: 90vh;
+}
+
+.container--start {
+	@include grid(12);
 	padding: 60px;
 	background-color: white;
+}
 
-	> img {
-		display: inline-flex;
-		max-width: 25%;
+.container--following {
+	@include transition(all, 0.7s);
+	padding: 60px;
+	height: 2000px;
+	background-color: white;
+
+	.hej-touching {
+		margin: 0 auto;
+  		text-align: center;
+		
+		> div {
+			margin: 0;
+		}
+		
+		p {
+			text-align: left;
+			padding-left: 20px;
+		}
+
+		.column-2-of-6 {
+			display: inline-block;
+		}
 	}
 }
 
+.hej-no-touching,
+.hej-touching {
+	padding: 40px 0;
+}
 
+.quote {
+	@include grid(12);
+	@include inline-block();
+	position: relative;
+	float: none;
+	
+	h2 {
+		max-width: 50%;
+		text-align: center;
+		margin: 0 auto;
+	}
+}
 
 
