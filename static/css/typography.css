@@ -1,19 +1,28 @@
+@import url(http://fonts.googleapis.com/css?family=Fugaz+One);
+@import url(http://fonts.googleapis.com/css?family=Oleo+Script);
+@import url(http://fonts.googleapis.com/css?family=Lora);
+/** FLIESSTEXT **/
+@import url(http://fonts.googleapis.com/css?family=Gentium+Book+Basic);
+@import url(http://fonts.googleapis.com/css?family=Vollkorn);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
-/* line 3, ../scss/typography.scss */
+/********** NICE ***************/
+@import url(http://fonts.googleapis.com/css?family=Fauna+One);
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+/* line 16, ../scss/typography.scss */
 p {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Monserrat', sans-serif;
   font-weight: 300;
   font-size: 1.3em;
 }
 
-/* line 9, ../scss/typography.scss */
+/* line 22, ../scss/typography.scss */
 h1 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Fauna One', cursive;
   font-weight: 700;
   font-size: 2.3em;
   text-align: center;
 }
-/* line 15, ../scss/typography.scss */
+/* line 29, ../scss/typography.scss */
 h1:after {
   content: "";
   display: block;
@@ -22,9 +31,9 @@ h1:after {
   margin: 20px auto;
 }
 
-/* line 24, ../scss/typography.scss */
+/* line 38, ../scss/typography.scss */
 h2 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Oleo Script', cursive;
   font-weight: 400;
   font-size: 2em;
 }

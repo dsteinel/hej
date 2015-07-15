@@ -1,4 +1,11 @@
+@import url(http://fonts.googleapis.com/css?family=Fugaz+One);
+@import url(http://fonts.googleapis.com/css?family=Oleo+Script);
+@import url(http://fonts.googleapis.com/css?family=Lora);
+@import url(http://fonts.googleapis.com/css?family=Gentium+Book+Basic);
+@import url(http://fonts.googleapis.com/css?family=Vollkorn);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+@import url(http://fonts.googleapis.com/css?family=Fauna+One);
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
 /* line 5, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -64,21 +71,23 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 3, ../scss/typography.scss */
+/** FLIESSTEXT **/
+/********** NICE ***************/
+/* line 16, ../scss/typography.scss */
 p {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Monserrat', sans-serif;
   font-weight: 300;
   font-size: 1.3em;
 }
 
-/* line 9, ../scss/typography.scss */
+/* line 22, ../scss/typography.scss */
 h1 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Fauna One', cursive;
   font-weight: 700;
   font-size: 2.3em;
   text-align: center;
 }
-/* line 15, ../scss/typography.scss */
+/* line 29, ../scss/typography.scss */
 h1:after {
   content: "";
   display: block;
@@ -87,9 +96,9 @@ h1:after {
   margin: 20px auto;
 }
 
-/* line 24, ../scss/typography.scss */
+/* line 38, ../scss/typography.scss */
 h2 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Oleo Script', cursive;
   font-weight: 400;
   font-size: 2em;
 }
@@ -182,35 +191,61 @@ body {
   -webkit-transition: all, 0.7s;
   transition: all, 0.7s;
   padding: 60px;
-  height: 2000px;
   background-color: white;
 }
-/* line 68, ../scss/main.scss */
+/* line 67, ../scss/main.scss */
+.container--following .hej-no-touching,
 .container--following .hej-touching {
+  -moz-transition: all, 2s;
+  -o-transition: all, 2s;
+  -webkit-transition: all, 2s;
+  transition: all, 2s;
   margin: 0 auto;
   text-align: center;
 }
-/* line 72, ../scss/main.scss */
+/* line 73, ../scss/main.scss */
+.container--following .hej-no-touching > div,
 .container--following .hej-touching > div {
   margin: 0;
 }
-/* line 76, ../scss/main.scss */
+/* line 77, ../scss/main.scss */
+.container--following .hej-no-touching p,
 .container--following .hej-touching p {
   text-align: left;
   padding-left: 20px;
 }
-/* line 81, ../scss/main.scss */
+/* line 82, ../scss/main.scss */
+.container--following .hej-no-touching .column-2-of-6,
 .container--following .hej-touching .column-2-of-6 {
   display: inline-block;
 }
 
-/* line 87, ../scss/main.scss */
+/* line 88, ../scss/main.scss */
 .hej-no-touching,
 .hej-touching {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
   padding: 40px 0;
 }
+/* line 93, ../scss/main.scss */
+.hej-no-touching.animate--left,
+.hej-touching.animate--left {
+  -moz-transition: all, 2s;
+  -o-transition: all, 2s;
+  -webkit-transition: all, 2s;
+  transition: all, 2s;
+  text-align: left;
+}
+/* line 98, ../scss/main.scss */
+.hej-no-touching.hide,
+.hej-touching.hide {
+  display: none;
+}
 
-/* line 92, ../scss/main.scss */
+/* line 103, ../scss/main.scss */
 .quote {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -227,12 +262,38 @@ body {
   *display: inline;
   position: relative;
   float: none;
+  margin: 4em 0;
 }
-/* line 98, ../scss/main.scss */
+/* line 110, ../scss/main.scss */
 .quote h2 {
   max-width: 50%;
   text-align: center;
   margin: 0 auto;
+}
+
+/* line 117, ../scss/main.scss */
+.take-care-of-each-other {
+  text-align: center;
+}
+/* line 120, ../scss/main.scss */
+.take-care-of-each-other p {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 50%;
+  display: block;
+  float: left;
+  margin: 10px 0;
+  padding: 0 12px;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  margin: 0 auto;
+  padding: 2em 0;
+  text-align: center;
+  float: inherit;
 }
 
 /* line 1, ../scss/background-transition.scss */

@@ -1,5 +1,6 @@
 $(document).ready(function(){ 
   colorize();
+  
   var 
     hejTouchingOffset = $(".hej-touching").offset().top
     headHeight = $(".header").height()
@@ -12,12 +13,14 @@ $(document).ready(function(){
     }else {
       $(".header").fadeIn();
     }
-    if($(window).scrollTop() < hejTouchingOffset-(imageHejHeight)/1.5) { //scrolled past the other div?
-        $(".hej-no-touching").show();
-        $(".hej-touching").hide();
+    if($(window).scrollTop() < hejTouchingOffset-(imageHejHeight)/1.5) {
+        $(".hej-touching").fadeOut("fast", function(){
+          $(".hej-no-touching").fadeIn("fast");
+        });
     }else{
-      $(".hej-no-touching").hide();
-      $(".hej-touching").show();
+      $(".hej-no-touching").fadeOut("fast", function(){
+        $(".hej-touching").fadeIn("fast");
+      });
     }
   });
 });
