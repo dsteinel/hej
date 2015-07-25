@@ -3,10 +3,10 @@ Error: Undefined mixin 'grid-break'.
         on line 36 of /Users/T/Documents/projects/hej-project/static/scss/grid.scss, in `grid-break'
         from line 36 of /Users/T/Documents/projects/hej-project/static/scss/grid.scss
 
-31: 
-32: .column-1-of-6 {
-33: 	width: 100%;
-34: 	text-align: left;
+31: }
+32: 
+33: .column-1-of-6 {
+34: 	width: 100%;
 35: 
 36: 	@include grid-break($grid-desktop) {
 37: 		width: 16.667%;
@@ -74,4 +74,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'grid-break'.\A         on line 36 of /Users/T/Documents/projects/hej-project/static/scss/grid.scss, in `grid-break'\A         from line 36 of /Users/T/Documents/projects/hej-project/static/scss/grid.scss\A \A 31: \A 32: .column-1-of-6 {\A 33: 	width: 100%;\A 34: 	text-align: left;\A 35: \A 36: 	@include grid-break($grid-desktop) {\A 37: 		width: 16.667%;\A 38: 	}\A 39: }\A 40: \A 41: .column-2-of-6 {"; }
+  content: "Error: Undefined mixin 'grid-break'.\A         on line 36 of /Users/T/Documents/projects/hej-project/static/scss/grid.scss, in `grid-break'\A         from line 36 of /Users/T/Documents/projects/hej-project/static/scss/grid.scss\A \A 31: }\A 32: \A 33: .column-1-of-6 {\A 34: 	width: 100%;\A 35: \A 36: 	@include grid-break($grid-desktop) {\A 37: 		width: 16.667%;\A 38: 	}\A 39: }\A 40: \A 41: .column-2-of-6 {"; }

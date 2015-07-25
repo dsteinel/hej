@@ -15,6 +15,22 @@ body {
 	height: 100%;
 }
 
+
+ul {
+	@include grid(12);
+	position: relative;
+}
+
+li {
+	padding: 1.5em;
+	text-decoration: none;
+}
+
+img {
+	width: 100%;
+	display: block;
+}
+
 .header {
 	position: fixed;
 	display: block;
@@ -48,21 +64,22 @@ body {
 }
 
 .main-container {
-	position: relative;
 	@include grid(12);
+	position: relative;
 	top: 90vh;
 }
 
-.container--start {
+.container {
 	@include grid(12);
-	padding: 60px;
-	background-color: white;
+	padding: 40px;
+	background-color: $container-background-color;
+	text-align: center;
 }
 
 .container--following {
 	@include transition(all, 0.7s);
 	padding: 60px;
-	background-color: white;
+	background-color: $container-background-color;
 
 	.hej-no-touching,
 	.hej-touching {
@@ -100,31 +117,38 @@ body {
 	}
 }
 
+.hej-sneak-preview {
+	margin-top: 1em;
+	
+	> ul {
+		text-align: center;
+	}
+}
+
 .quote {
 	@include grid(12);
-	@include inline-block();
 	position: relative;
+	display: table;
 	float: none;
-	margin: 4em 0;
+	height: 180px;
 	
 	h2 {
+		display: table-cell;
+		font-size: $font-size-quote;
+		margin: 0 auto;
 		max-width: 50%;
 		text-align: center;
-		margin: 0 auto;
+		vertical-align: middle;
 	}
 }
 
 .take-care-of-each-other {
-	text-align: center;
 
 	p {
 		@include grid(6);
 		@include inline-block;
 		margin: 0 auto;
-		padding: 2em 0;
-		text-align: center;
+		padding: $small-gutter 0;
 		float: inherit;
 	}
 }
-
-

@@ -10,20 +10,32 @@
 
 
 /********** NICE ***************/
-@import url(http://fonts.googleapis.com/css?family=Fauna+One);
+@import url(http://fonts.googleapis.com/css?family=Fauna+One); // only nice in Chrome
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
+@import url("//hello.myfonts.net/count/2eaf0f");
+
+@font-face {
+	font-family: 'MuseoSlab-500';
+	src: url('webfonts/2EAF0F_0_0.eot');
+	src: url('webfonts/2EAF0F_0_0.eot?#iefix') format('embedded-opentype'),
+		url('webfonts/2EAF0F_0_0.woff2') format('woff2'),
+		url('webfonts/2EAF0F_0_0.woff') format('woff'),
+		url('webfonts/2EAF0F_0_0.ttf') format('truetype');
+	}
 
 p {
 	font-family: 'Monserrat', sans-serif;
 	font-weight: 300;
-	font-size: 1.3em;
+	font-size: $font-size-p;
+	text-align: left;
+	margin: auto $small-gutter;
+	line-height: 1.3;
 }
 
 h1 {
-	// font-family: 'Open Sans', sans-serif;
-	font-family: 'Fauna One', cursive;
+	font-family: MuseoSlab-500, sans-serif;
 	font-weight: 700;
-	font-size: 2.3em;
+	font-size: $font-size-h1;
 	text-align: center;
 
 	&:after {
@@ -37,7 +49,15 @@ h1 {
 
 h2 {
 	// font-family: 'Open Sans', sans-serif;
-	font-family: 'Oleo Script', cursive;
+	font-family: 'Vollkorn', serif;
 	font-weight: 400;
-	font-size: 2em;
+	font-size: $font-size-h2;
+}
+
+.description {
+	margin: 0 1.5em;
+}
+
+.centered--text {
+	text-align: center;
 }

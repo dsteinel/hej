@@ -1,6 +1,6 @@
 $(document).ready(function(){ 
   colorize();
-  
+
   var 
     hejTouchingOffset = $(".hej-touching").offset().top
     headHeight = $(".header").height()
@@ -10,14 +10,14 @@ $(document).ready(function(){
   $(window).scroll(function() {
     if ($(window).scrollTop() > (headHeight)/2) {
       $(".header").fadeOut();
-    }else {
+    } else {
       $(".header").fadeIn();
     }
     if($(window).scrollTop() < hejTouchingOffset-(imageHejHeight)/1.5) {
         $(".hej-touching").fadeOut("fast", function(){
           $(".hej-no-touching").fadeIn("fast");
         });
-    }else{
+    } else {
       $(".hej-no-touching").fadeOut("fast", function(){
         $(".hej-touching").fadeIn("fast");
       });
