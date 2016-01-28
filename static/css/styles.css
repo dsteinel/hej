@@ -1,12 +1,5 @@
-@import url(http://fonts.googleapis.com/css?family=Fugaz+One);
-@import url(http://fonts.googleapis.com/css?family=Oleo+Script);
-@import url(http://fonts.googleapis.com/css?family=Lora);
-@import url(http://fonts.googleapis.com/css?family=Gentium+Book+Basic);
-@import url(http://fonts.googleapis.com/css?family=Vollkorn);
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
-@import url(http://fonts.googleapis.com/css?family=Fauna+One);
+@charset "UTF-8";
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
-@import url("//hello.myfonts.net/count/2eaf0f");
 /* line 5, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -72,76 +65,27 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/** FLIESSTEXT **/
-/********** NICE ***************/
-@font-face {
-  font-family: 'MuseoSlab-500';
-  src: url("webfonts/2EAF0F_0_0.eot");
-  src: url("webfonts/2EAF0F_0_0.eot?#iefix") format("embedded-opentype"), url("webfonts/2EAF0F_0_0.woff2") format("woff2"), url("webfonts/2EAF0F_0_0.woff") format("woff"), url("webfonts/2EAF0F_0_0.ttf") format("truetype");
-}
-/* line 26, ../scss/typography.scss */
-p {
-  font-family: 'Monserrat', sans-serif;
-  font-weight: 300;
-  font-size: 1.3em;
-  text-align: left;
-  margin: auto 2em;
-  line-height: 1.3;
-}
-
-/* line 35, ../scss/typography.scss */
-h1 {
-  font-family: MuseoSlab-500, sans-serif;
-  font-weight: 700;
-  font-size: 3em;
-  text-align: center;
-}
-/* line 41, ../scss/typography.scss */
-h1:after {
-  content: "";
-  display: block;
-  width: 10%;
-  border: 1px solid #8BB632;
-  margin: 20px auto;
-}
-
-/* line 50, ../scss/typography.scss */
-h2 {
-  font-family: 'Vollkorn', serif;
-  font-weight: 400;
-  font-size: 2.3em;
-}
-
-/* line 57, ../scss/typography.scss */
-.description {
-  margin: 0 1.5em;
-}
-
-/* line 61, ../scss/typography.scss */
-.centered--text {
-  text-align: center;
-}
-
 /* line 2, ../scss/main.scss */
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-/* line 7, ../scss/main.scss */
+/* line 8, ../scss/main.scss */
 html {
   position: relative;
   height: 100%;
   width: 100%;
 }
 
-/* line 13, ../scss/main.scss */
+/* line 14, ../scss/main.scss */
 body {
   width: 100%;
   height: 100%;
 }
 
-/* line 19, ../scss/main.scss */
+/* line 20, ../scss/main.scss */
 ul {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -154,44 +98,55 @@ ul {
   position: relative;
 }
 
-/* line 24, ../scss/main.scss */
+/* line 25, ../scss/main.scss */
 li {
-  padding: 1.5em;
   text-decoration: none;
 }
+@media screen and (min-width: 800px) {
+  /* line 25, ../scss/main.scss */
+  li {
+    padding: 1.5em;
+  }
+}
 
-/* line 29, ../scss/main.scss */
+/* line 33, ../scss/main.scss */
 img {
   width: 100%;
   display: block;
 }
 
-/* line 34, ../scss/main.scss */
+/* line 38, ../scss/main.scss */
 .header {
-  position: fixed;
-  display: block;
-  width: 100%;
-  height: 100vh;
-}
-/* line 40, ../scss/main.scss */
-.header > div {
+  -moz-transition: all, 1s;
+  -o-transition: all, 1s;
+  -webkit-transition: all, 1s;
+  transition: all, 1s;
   position: relative;
-  bottom: 20%;
+  height: 100vh;
+  background-image: url("/static/img/hej-mask-longer-back.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-color: #000000;
+}
+/* line 47, ../scss/main.scss */
+.header > div {
+  position: absolute;
+  top: 50%;
   left: 50%;
 }
-/* line 46, ../scss/main.scss */
+/* line 53, ../scss/main.scss */
 .header h1,
 .header h2 {
   text-transform: uppercase;
   text-align: left;
   color: #FFF;
 }
-/* line 52, ../scss/main.scss */
+/* line 59, ../scss/main.scss */
 .header h1:after,
 .header h2:after {
   display: none;
 }
-/* line 57, ../scss/main.scss */
+/* line 64, ../scss/main.scss */
 .header img {
   position: relative;
   display: block;
@@ -200,7 +155,7 @@ img {
   height: auto;
 }
 
-/* line 66, ../scss/main.scss */
+/* line 73, ../scss/main.scss */
 .main-container {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -211,10 +166,9 @@ img {
   margin: 10px 0;
   padding: 0 12px;
   position: relative;
-  top: 90vh;
 }
 
-/* line 72, ../scss/main.scss */
+/* line 78, ../scss/main.scss */
 .container {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -224,21 +178,45 @@ img {
   float: left;
   margin: 10px 0;
   padding: 0 12px;
-  padding: 40px;
+  padding: 3em;
   background-color: #FFFFFF;
   text-align: center;
 }
 
-/* line 79, ../scss/main.scss */
+/* line 85, ../scss/main.scss */
+.container--connecting {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  display: block;
+  float: left;
+  margin: 10px 0;
+  padding: 0 12px;
+  background-color: #FFFFFF;
+  text-align: center;
+}
+@media screen and (min-width: 650px) {
+  /* line 85, ../scss/main.scss */
+  .container--connecting {
+    padding: 0 3em 0;
+  }
+}
+
+/* line 95, ../scss/main.scss */
 .container--following {
   -moz-transition: all, 0.7s;
   -o-transition: all, 0.7s;
   -webkit-transition: all, 0.7s;
   transition: all, 0.7s;
-  padding: 60px;
-  background-color: #FFFFFF;
 }
-/* line 84, ../scss/main.scss */
+@media screen and (min-width: 800px) {
+  /* line 95, ../scss/main.scss */
+  .container--following {
+    padding: 3em;
+  }
+}
+/* line 102, ../scss/main.scss */
 .container--following .hej-no-touching,
 .container--following .hej-touching {
   -moz-transition: all, 2s;
@@ -248,24 +226,24 @@ img {
   margin: 0 auto;
   text-align: center;
 }
-/* line 90, ../scss/main.scss */
+/* line 108, ../scss/main.scss */
 .container--following .hej-no-touching > div,
 .container--following .hej-touching > div {
   margin: 0;
 }
-/* line 94, ../scss/main.scss */
+/* line 112, ../scss/main.scss */
 .container--following .hej-no-touching p,
 .container--following .hej-touching p {
   text-align: left;
   padding-left: 20px;
 }
-/* line 99, ../scss/main.scss */
+/* line 117, ../scss/main.scss */
 .container--following .hej-no-touching .column-2-of-6,
 .container--following .hej-touching .column-2-of-6 {
   display: inline-block;
 }
 
-/* line 105, ../scss/main.scss */
+/* line 123, ../scss/main.scss */
 .hej-no-touching,
 .hej-touching {
   display: inline-block;
@@ -273,9 +251,8 @@ img {
   *vertical-align: auto;
   *zoom: 1;
   *display: inline;
-  padding: 40px 0;
 }
-/* line 110, ../scss/main.scss */
+/* line 127, ../scss/main.scss */
 .hej-no-touching.animate--left,
 .hej-touching.animate--left {
   -moz-transition: all, 2s;
@@ -284,47 +261,42 @@ img {
   transition: all, 2s;
   text-align: left;
 }
-/* line 115, ../scss/main.scss */
+/* line 132, ../scss/main.scss */
 .hej-no-touching.hide,
 .hej-touching.hide {
   display: none;
 }
 
-/* line 120, ../scss/main.scss */
+/* line 137, ../scss/main.scss */
 .hej-sneak-preview {
+  -moz-transition: all 2s;
+  -o-transition: all 2s;
+  -webkit-transition: all 2s;
+  transition: all 2s;
   margin-top: 1em;
 }
-/* line 123, ../scss/main.scss */
+/* line 141, ../scss/main.scss */
 .hej-sneak-preview > ul {
   text-align: center;
 }
-
-/* line 128, ../scss/main.scss */
-.quote {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 100%;
-  display: block;
-  float: left;
-  margin: 10px 0;
-  padding: 0 12px;
-  position: relative;
-  display: table;
-  float: none;
-  height: 180px;
-}
-/* line 135, ../scss/main.scss */
-.quote h2 {
-  display: table-cell;
-  font-size: 2em;
-  margin: 0 auto;
-  max-width: 50%;
-  text-align: center;
-  vertical-align: middle;
-}
-
 /* line 147, ../scss/main.scss */
+.hej-sneak-preview .hej-description-steps > li > img {
+  -moz-transition: left 1s;
+  -o-transition: left 1s;
+  -webkit-transition: left 1s;
+  transition: left 1s;
+  margin: 3em 0 2em;
+  left: -100%;
+  max-width: 223px;
+}
+@media screen and (min-width: 800px) {
+  /* line 147, ../scss/main.scss */
+  .hej-sneak-preview .hej-description-steps > li > img {
+    margin: 0;
+  }
+}
+
+/* line 163, ../scss/main.scss */
 .take-care-of-each-other p {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -342,6 +314,46 @@ img {
   margin: 0 auto;
   padding: 2em 0;
   float: inherit;
+}
+
+/* line 172, ../scss/main.scss */
+.floating-gallery {
+  margin: 0 0 3em;
+}
+/* line 175, ../scss/main.scss */
+.floating-gallery p {
+  margin-bottom: 1.5em;
+}
+/* line 179, ../scss/main.scss */
+.floating-gallery.column-6-of-6 {
+  width: 100%;
+}
+@media screen and (min-width: 800px) {
+  /* line 179, ../scss/main.scss */
+  .floating-gallery.column-6-of-6 {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  /* line 179, ../scss/main.scss */
+  .floating-gallery.column-6-of-6 {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  /* line 190, ../scss/main.scss */
+  .floating-gallery.column-6-of-6 > div {
+    float: left;
+  }
+}
+
+/* line 198, ../scss/main.scss */
+footer {
+  font-size: 0.9em;
+}
+/* line 201, ../scss/main.scss */
+footer.container {
+  text-align: left;
 }
 
 /* line 1, ../scss/background-transition.scss */
@@ -374,7 +386,7 @@ body {
 .description--row {
   display: block;
   width: 100%;
-  padding: 40px 0;
+  padding: 2em 0;
   text-align: center;
 }
 /* line 10, ../scss/grid.scss */
@@ -386,10 +398,23 @@ body {
 .description--row img {
   width: 100%;
   height: auto;
-  margin: 20px auto;
+  margin: 1.2em auto;
 }
 
 /* line 22, ../scss/grid.scss */
+.container--half {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+@media screen and (min-width: 1000px) {
+  /* line 22, ../scss/grid.scss */
+  .container--half {
+    width: 50%;
+  }
+}
+
+/* line 32, ../scss/grid.scss */
 .column-1-of-6,
 .column-2-of-6,
 .column-3-of-6,
@@ -401,56 +426,227 @@ body {
   *vertical-align: auto;
   *zoom: 1;
   *display: inline;
-  margin: 30px inherit;
-}
-
-/* line 33, ../scss/grid.scss */
-.column-1-of-6 {
+  position: relative;
   width: 100%;
 }
+
 @media screen and (min-width: 800px) {
-  /* line 33, ../scss/grid.scss */
+  /* line 43, ../scss/grid.scss */
   .column-1-of-6 {
+    position: relative;
+    margin: 0 auto;
+    display: block;
     width: 16.667%;
   }
 }
 
 @media screen and (min-width: 800px) {
-  /* line 41, ../scss/grid.scss */
+  /* line 52, ../scss/grid.scss */
   .column-2-of-6 {
     width: 33.333%;
   }
 }
 
 @media screen and (min-width: 800px) {
-  /* line 47, ../scss/grid.scss */
+  /* line 58, ../scss/grid.scss */
   .column-3-of-6 {
     width: 50%;
   }
 }
 
 @media screen and (min-width: 800px) {
-  /* line 53, ../scss/grid.scss */
+  /* line 64, ../scss/grid.scss */
   .column-4-of-6 {
     width: 66.6667%;
   }
 }
 
 @media screen and (min-width: 800px) {
-  /* line 59, ../scss/grid.scss */
+  /* line 70, ../scss/grid.scss */
   .column-5-of-6 {
     width: 83.3333%;
   }
 }
 
 @media screen and (min-width: 800px) {
-  /* line 65, ../scss/grid.scss */
+  /* line 76, ../scss/grid.scss */
   .column-6-of-6 {
     width: 100%;
   }
 }
 
-/* line 71, ../scss/grid.scss */
+/* line 82, ../scss/grid.scss */
 .grid-padding-top-bottom {
   margin: 1.5em 0;
+}
+
+/* line 86, ../scss/grid.scss */
+.grid-gutter {
+  padding: 1.5em;
+}
+
+/* line 90, ../scss/grid.scss */
+.grid-gutter-s {
+  padding: 1em 0;
+}
+@media screen and (min-width: 800px) {
+  /* line 90, ../scss/grid.scss */
+  .grid-gutter-s {
+    padding: 1em;
+  }
+}
+
+/* line 98, ../scss/grid.scss */
+.image-gallery {
+  width: 80%;
+}
+@media screen and (min-width: 1000px) {
+  /* line 98, ../scss/grid.scss */
+  .image-gallery {
+    width: 49%;
+  }
+}
+
+/********** NICE ***************/
+@font-face {
+  font-family: 'MuseoSlab-500';
+  src: url("webfonts/2EAF0F_0_0.eot");
+  src: url("webfonts/2EAF0F_0_0.eot?#iefix") format("embedded-opentype"), url("webfonts/2EAF0F_0_0.woff2") format("woff2"), url("webfonts/2EAF0F_0_0.woff") format("woff"), url("webfonts/2EAF0F_0_0.ttf") format("truetype");
+}
+/* line 31, ../scss/typography.scss */
+p {
+  font-family: 'Monserrat', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-align: left;
+  line-height: 1.3;
+  color: #2F312E;
+}
+@media screen and (min-width: 800px) {
+  /* line 31, ../scss/typography.scss */
+  p {
+    margin: auto 2em;
+    font-size: 18px;
+  }
+}
+
+/* line 45, ../scss/typography.scss */
+h1 {
+  font-family: MuseoSlab-500, sans-serif;
+  font-weight: 700;
+  font-size: 2em;
+  text-align: center;
+  color: #000000;
+  margin: 0.2em 0 1em;
+}
+@media screen and (min-width: 800px) {
+  /* line 45, ../scss/typography.scss */
+  h1 {
+    font-size: 3em;
+  }
+}
+/* line 57, ../scss/typography.scss */
+h1:after {
+  content: "";
+  display: block;
+  width: 10%;
+  border: 1px solid #8BB632;
+  margin: 20px auto;
+}
+
+/* line 66, ../scss/typography.scss */
+h2 {
+  font-family: 'Vollkorn', serif;
+  font-weight: 400;
+  font-size: 1.7em;
+  color: #000000;
+}
+@media screen and (min-width: 800px) {
+  /* line 66, ../scss/typography.scss */
+  h2 {
+    font-size: 2.3em;
+  }
+}
+
+/* line 78, ../scss/typography.scss */
+h3 {
+  text-align: left;
+  font-size: 1em;
+  text-transform: uppercase;
+  font-family: 'Vollkorn', serif;
+  margin: 0 2em 0.5em;
+  color: #8BB632;
+}
+
+/* line 87, ../scss/typography.scss */
+sub {
+  font-family: MuseoSlab-500, sans-serif;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  color: #888888;
+  bottom: 0;
+  position: absolute;
+  margin-bottom: -10px;
+  right: 0;
+}
+
+/* line 99, ../scss/typography.scss */
+p span  {
+  color: #8BB632;
+}
+/* line 102, ../scss/typography.scss */
+p a {
+  color: #8BB632;
+}
+
+@media screen and (min-width: 800px) {
+  /* line 107, ../scss/typography.scss */
+  .description {
+    margin: 0 1.5em;
+    padding: 0 20px;
+  }
+}
+
+/* line 114, ../scss/typography.scss */
+.centered--text,
+.description--centered {
+  text-align: center;
+}
+
+/* line 119, ../scss/typography.scss */
+.description--intro {
+  font-size: 1.3em;
+  margin-bottom: 1em;
+}
+
+/* line 124, ../scss/typography.scss */
+.quote {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  display: block;
+  float: left;
+  margin: 10px 0;
+  padding: 0 12px;
+  position: relative;
+  display: table;
+  float: none;
+  height: 180px;
+}
+/* line 131, ../scss/typography.scss */
+.quote h2 {
+  display: table-cell;
+  font-size: 1.5em;
+  margin: 0 auto;
+  max-width: 50%;
+  text-align: center;
+  vertical-align: middle;
+  color: #F1F1F1;
+}
+@media screen and (min-width: 800px) {
+  /* line 131, ../scss/typography.scss */
+  .quote h2 {
+    font-size: 2em;
+  }
 }

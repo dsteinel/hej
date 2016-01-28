@@ -1,73 +1,145 @@
-/*
-Error: Undefined variable: "$font-size-p".
-        on line 29 of /Users/T/Documents/projects/hej-project/static/scss/typography.scss
+@charset "UTF-8";
+/********** NICE ***************/
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+@font-face {
+  font-family: 'MuseoSlab-500';
+  src: url("webfonts/2EAF0F_0_0.eot");
+  src: url("webfonts/2EAF0F_0_0.eot?#iefix") format("embedded-opentype"), url("webfonts/2EAF0F_0_0.woff2") format("woff2"), url("webfonts/2EAF0F_0_0.woff") format("woff"), url("webfonts/2EAF0F_0_0.ttf") format("truetype");
+}
+/* line 31, ../scss/typography.scss */
+p {
+  font-family: 'Monserrat', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-align: left;
+  line-height: 1.3;
+  color: #2F312E;
+}
+@media screen and (min-width: 800px) {
+  /* line 31, ../scss/typography.scss */
+  p {
+    margin: auto 2em;
+    font-size: 18px;
+  }
+}
 
-24: 	}
-25: 
-26: p {
-27: 	font-family: 'Monserrat', sans-serif;
-28: 	font-weight: 300;
-29: 	font-size: $font-size-p;
-30: 	text-align: left;
-31: 	margin: auto $small-gutter;
-32: 	line-height: 1.3;
-33: }
-34: 
+/* line 45, ../scss/typography.scss */
+h1 {
+  font-family: MuseoSlab-500, sans-serif;
+  font-weight: 700;
+  font-size: 2em;
+  text-align: center;
+  color: #000000;
+  margin: 0.2em 0 1em;
+}
+@media screen and (min-width: 800px) {
+  /* line 45, ../scss/typography.scss */
+  h1 {
+    font-size: 3em;
+  }
+}
+/* line 57, ../scss/typography.scss */
+h1:after {
+  content: "";
+  display: block;
+  width: 10%;
+  border: 1px solid #8BB632;
+  margin: 20px auto;
+}
 
-Backtrace:
-/Users/T/Documents/projects/hej-project/static/scss/typography.scss:29
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/script/tree/variable.rb:49:in `_perform'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/script/tree/node.rb:50:in `perform'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:394:in `visit_prop'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `block in with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `block (2 levels) in visit_rule'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `map'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `block in visit_rule'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:428:in `visit_rule'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `block in with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:52:in `map'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:157:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:8:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/root_node.rb:20:in `render'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/engine.rb:268:in `render'
-/Library/Ruby/Gems/2.0.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:17:in `block in render'
-/Library/Ruby/Gems/2.0.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:29:in `with_import_scope'
-/Library/Ruby/Gems/2.0.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:16:in `render'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:209:in `each'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:470:in `on_file_changed'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:328:in `block in watch'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/vendor/listen/lib/listen/listener.rb:252:in `call'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/vendor/listen/lib/listen/listener.rb:252:in `on_change'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/vendor/listen/lib/listen/adapter.rb:254:in `call'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/vendor/listen/lib/listen/adapter.rb:254:in `report_changes'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/vendor/listen/lib/listen/adapter.rb:323:in `poll_changed_directories'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Undefined variable: \"$font-size-p\".\A         on line 29 of /Users/T/Documents/projects/hej-project/static/scss/typography.scss\A \A 24: 	}\A 25: \A 26: p {\A 27: 	font-family: 'Monserrat', sans-serif;\A 28: 	font-weight: 300;\A 29: 	font-size: $font-size-p;\A 30: 	text-align: left;\A 31: 	margin: auto $small-gutter;\A 32: 	line-height: 1.3;\A 33: }\A 34: "; }
+/* line 66, ../scss/typography.scss */
+h2 {
+  font-family: 'Vollkorn', serif;
+  font-weight: 400;
+  font-size: 1.7em;
+  color: #000000;
+}
+@media screen and (min-width: 800px) {
+  /* line 66, ../scss/typography.scss */
+  h2 {
+    font-size: 2.3em;
+  }
+}
+
+/* line 78, ../scss/typography.scss */
+h3 {
+  text-align: left;
+  font-size: 1em;
+  text-transform: uppercase;
+  font-family: 'Vollkorn', serif;
+  margin: 0 2em 0.5em;
+  color: #8BB632;
+}
+
+/* line 87, ../scss/typography.scss */
+sub {
+  font-family: MuseoSlab-500, sans-serif;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  color: #888888;
+  bottom: 0;
+  position: absolute;
+  margin-bottom: -10px;
+  right: 0;
+}
+
+/* line 99, ../scss/typography.scss */
+p span  {
+  color: #8BB632;
+}
+/* line 102, ../scss/typography.scss */
+p a {
+  color: #8BB632;
+}
+
+@media screen and (min-width: 800px) {
+  /* line 107, ../scss/typography.scss */
+  .description {
+    margin: 0 1.5em;
+    padding: 0 20px;
+  }
+}
+
+/* line 114, ../scss/typography.scss */
+.centered--text,
+.description--centered {
+  text-align: center;
+}
+
+/* line 119, ../scss/typography.scss */
+.description--intro {
+  font-size: 1.3em;
+  margin-bottom: 1em;
+}
+
+/* line 124, ../scss/typography.scss */
+.quote {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  display: block;
+  float: left;
+  margin: 10px 0;
+  padding: 0 12px;
+  position: relative;
+  display: table;
+  float: none;
+  height: 180px;
+}
+/* line 131, ../scss/typography.scss */
+.quote h2 {
+  display: table-cell;
+  font-size: 1.5em;
+  margin: 0 auto;
+  max-width: 50%;
+  text-align: center;
+  vertical-align: middle;
+  color: #F1F1F1;
+}
+@media screen and (min-width: 800px) {
+  /* line 131, ../scss/typography.scss */
+  .quote h2 {
+    font-size: 2em;
+  }
+}

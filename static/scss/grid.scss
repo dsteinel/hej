@@ -4,7 +4,7 @@
 .description--row {
 	display: block;
 	width: 100%;
-	padding: 40px 0;
+	padding: 2em 0;
 	text-align: center;
 
 	h1 {
@@ -15,7 +15,17 @@
 	img {
 		width: 100%;
 		height: auto;
-		margin: 20px auto;
+		margin: 1.2em auto;
+	}
+}
+
+.container--half {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	
+	@include grid-break($grid-max) {
+		width: 50%;
 	}
 }
 
@@ -26,14 +36,15 @@
 .column-5-of-6,
 .column-6-of-6 {
 	@include inline-block();
-	margin: 30px inherit;
-
+	position: relative;
+	width: 100%;
 }
 
 .column-1-of-6 {
-	width: 100%;
-
 	@include grid-break($grid-desktop) {
+		position: relative;
+		margin: 0 auto;
+		display: block;
 		width: 16.667%;
 	}
 }
@@ -72,4 +83,23 @@
 	margin: 1.5em 0;
 }
 
+.grid-gutter {
+	padding: 1.5em;
+}
+
+.grid-gutter-s {
+	padding: 1em 0;
+
+	@include grid-break($grid-desktop) {
+		padding: 1em;
+	}
+}
+
+.image-gallery {
+	width: 80%;
+
+	@include grid-break($grid-max) {
+		width: 49%;
+	}
+}
 

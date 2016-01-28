@@ -2,6 +2,7 @@
 * {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
 
 html {
@@ -22,8 +23,11 @@ ul {
 }
 
 li {
-	padding: 1.5em;
 	text-decoration: none;
+
+	@include grid-break($grid-desktop) {
+		padding: 1.5em;
+	}
 }
 
 img {
@@ -32,14 +36,17 @@ img {
 }
 
 .header {
-	position: fixed;
-	display: block;
-	width: 100%;
+	@include transition(all, 1s);
+	position: relative;
 	height: 100vh;
+	background-image: url('/static/img/hej-mask-longer-back.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-color: #000000;
 
 	> div {
-		position: relative;
-		bottom: 20%;
+		position: absolute;
+		top: 50%;
 		left: 50%;
 	}
 
@@ -66,31 +73,42 @@ img {
 .main-container {
 	@include grid(12);
 	position: relative;
-	top: 90vh;
 }
 
 .container {
 	@include grid(12);
-	padding: 40px;
+	padding: 3em;
 	background-color: $container-background-color;
 	text-align: center;
 }
 
+.container--connecting {
+	@include grid(12);
+	background-color: $container-background-color;
+	text-align: center;
+
+	@include grid-break($grid-break) {
+		padding: 0 3em 0;
+	}
+}
+
 .container--following {
 	@include transition(all, 0.7s);
-	padding: 60px;
-	background-color: $container-background-color;
+
+	@include grid-break($grid-desktop) {
+		padding: 3em;
+	}
 
 	.hej-no-touching,
 	.hej-touching {
 		@include transition(all, 2s);
 		margin: 0 auto;
-  		text-align: center;
-		
+		text-align: center;
+
 		> div {
 			margin: 0;
 		}
-		
+
 		p {
 			text-align: left;
 			padding-left: 20px;
@@ -105,8 +123,7 @@ img {
 .hej-no-touching,
 .hej-touching {
 	@include inline-block();
-	padding: 40px 0;
-	
+
 	&.animate--left {
 		@include transition(all, 2s);
 		text-align: left;
@@ -118,27 +135,26 @@ img {
 }
 
 .hej-sneak-preview {
+	@include transition(all 2s);
 	margin-top: 1em;
-	
+
 	> ul {
 		text-align: center;
 	}
-}
 
-.quote {
-	@include grid(12);
-	position: relative;
-	display: table;
-	float: none;
-	height: 180px;
-	
-	h2 {
-		display: table-cell;
-		font-size: $font-size-quote;
-		margin: 0 auto;
-		max-width: 50%;
-		text-align: center;
-		vertical-align: middle;
+	.hej-description-steps {
+		> li {
+			> img {
+				@include transition(left 1s);
+				margin: 3em 0 2em;
+				left: -100%;
+				max-width: 223px;
+
+				@include grid-break($grid-desktop) {
+					margin: 0;
+				}
+			}
+		}
 	}
 }
 
@@ -150,5 +166,39 @@ img {
 		margin: 0 auto;
 		padding: $small-gutter 0;
 		float: inherit;
+	}
+}
+
+.floating-gallery {
+	margin: 0 0 3em;
+
+	p {
+		margin-bottom: 1.5em;
+	}
+
+	&.column-6-of-6 {
+		width: 100%;
+
+		@include grid-break($grid-desktop){
+			width: 80%;
+		}
+
+		@include grid-break($grid-max){
+			width: 70%;
+		}
+
+		> div {
+			@include grid-break($grid-max){
+				float: left;
+			}
+		}
+	}
+}
+
+footer {
+	font-size: 0.9em;
+
+	&.container {
+		text-align: left;
 	}
 }

@@ -1,18 +1,23 @@
 
-@import url(http://fonts.googleapis.com/css?family=Fugaz+One);
-@import url(http://fonts.googleapis.com/css?family=Oleo+Script);
-@import url(http://fonts.googleapis.com/css?family=Lora);
+// @import url(http://fonts.googleapis.com/css?family=Fugaz+One);
+// @import url(http://fonts.googleapis.com/css?family=Oleo+Script);
+// @import url(http://fonts.googleapis.com/css?family=Lora);
 
-/** FLIESSTEXT **/
-@import url(http://fonts.googleapis.com/css?family=Gentium+Book+Basic);
-@import url(http://fonts.googleapis.com/css?family=Vollkorn);
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+// * FLIESSTEXT *
+// @import url(http://fonts.googleapis.com/css?family=Gentium+Book+Basic);
+// @import url(http://fonts.googleapis.com/css?family=Vollkorn);
+// @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
 
 
 /********** NICE ***************/
-@import url(http://fonts.googleapis.com/css?family=Fauna+One); // only nice in Chrome
+// @import url(http://fonts.googleapis.com/css?family=Fauna+One); // only nice in Chrome
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
-@import url("//hello.myfonts.net/count/2eaf0f");
+// @import url("//hello.myfonts.net/count/2eaf0f");
+
+@import "constants";
+@import "mixins/grid-system";
+@import "compass";
+
 
 @font-face {
 	font-family: 'MuseoSlab-500';
@@ -26,23 +31,34 @@
 p {
 	font-family: 'Monserrat', sans-serif;
 	font-weight: 300;
-	font-size: $font-size-p;
+	font-size: $font-size-mobile;
 	text-align: left;
-	margin: auto $small-gutter;
 	line-height: 1.3;
+	color: $text-color;
+
+	@include grid-break($grid-desktop) {
+		margin: auto $small-gutter;
+		font-size: $font-size-desktop;
+	}
 }
 
 h1 {
 	font-family: MuseoSlab-500, sans-serif;
 	font-weight: 700;
-	font-size: $font-size-h1;
+	font-size: $font-size-mobile-h1;
 	text-align: center;
+	color: $h1-color;
+	margin: 0.2em 0 1em;
+	
+	@include grid-break($grid-desktop) {
+		font-size: $font-size-h1;
+	}
 
 	&:after {
 		content: "";
 		display: block;
 		width: 10%;
-		border: 1px solid #8BB632;
+		border: 1px solid $brand-color;
 		margin: 20px auto;
 	}
 }
@@ -51,13 +67,78 @@ h2 {
 	// font-family: 'Open Sans', sans-serif;
 	font-family: 'Vollkorn', serif;
 	font-weight: 400;
-	font-size: $font-size-h2;
+	font-size: $font-size-mobile-h2;
+	color: $h2-color;
+
+	@include grid-break($grid-desktop) {
+		font-size: $font-size-h2;
+	}
+}
+
+h3 {
+	text-align: left;
+	font-size: 1em;
+	text-transform: uppercase;
+	font-family: 'Vollkorn', serif;
+    margin: 0 2em 0.5em;
+    color: $brand-color;
+}
+
+sub {
+	font-family: MuseoSlab-500, sans-serif;
+	font-size: 0.8em;
+	text-transform: uppercase;
+	color: #888888;
+	bottom: 0;
+	position: absolute;
+	margin-bottom: -10px;
+	right: 0;
+}
+
+p {
+	span {
+		color: $brand-color;
+	}
+	a {
+		color: $brand-color;
+	}
 }
 
 .description {
-	margin: 0 1.5em;
+	@include grid-break($grid-desktop) {
+		margin: 0 1.5em;
+		padding: 0 20px;
+	}
 }
 
-.centered--text {
+.centered--text,
+.description--centered {
 	text-align: center;
+}
+
+.description--intro {
+	font-size: 1.3em;
+	margin-bottom: 1em;
+}
+
+.quote {
+	@include grid(12);
+	position: relative;
+	display: table;
+	float: none;
+	height: 180px;
+
+	h2 {
+		display: table-cell;
+		font-size: $font-size-mobile-quote;
+		margin: 0 auto;
+		max-width: 50%;
+		text-align: center;
+		vertical-align: middle;
+		color: #F1F1F1;
+
+		@include grid-break($grid-desktop) {
+			font-size: $font-size-quote;
+		}
+	}
 }

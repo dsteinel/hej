@@ -1,23 +1,23 @@
 /*
 Error: Undefined mixin 'grid-break'.
-        on line 36 of /Users/T/Documents/projects/hej-project/static/scss/grid.scss, in `grid-break'
-        from line 36 of /Users/T/Documents/projects/hej-project/static/scss/grid.scss
+        on line 27 of /Users/T/Documents/projects/hej-project/static/scss/grid.scss, in `grid-break'
+        from line 27 of /Users/T/Documents/projects/hej-project/static/scss/grid.scss
 
-31: }
-32: 
-33: .column-1-of-6 {
-34: 	width: 100%;
-35: 
-36: 	@include grid-break($grid-desktop) {
-37: 		width: 16.667%;
-38: 	}
-39: }
-40: 
-41: .column-2-of-6 {
+22: .container--half {
+23: 	width: 100%;
+24: 	margin: 0 auto;
+25: 	text-align: center;
+26: 	
+27: 	@include grid-break($grid-max) {
+28: 		width: 50%;
+29: 	}
+30: }
+31: 
+32: .column-1-of-6,
 
 Backtrace:
-/Users/T/Documents/projects/hej-project/static/scss/grid.scss:36:in `grid-break'
-/Users/T/Documents/projects/hej-project/static/scss/grid.scss:36
+/Users/T/Documents/projects/hej-project/static/scss/grid.scss:27:in `grid-break'
+/Users/T/Documents/projects/hej-project/static/scss/grid.scss:27
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:348:in `block in visit_mixin'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/stack.rb:98:in `block in with_mixin'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
@@ -74,4 +74,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'grid-break'.\A         on line 36 of /Users/T/Documents/projects/hej-project/static/scss/grid.scss, in `grid-break'\A         from line 36 of /Users/T/Documents/projects/hej-project/static/scss/grid.scss\A \A 31: }\A 32: \A 33: .column-1-of-6 {\A 34: 	width: 100%;\A 35: \A 36: 	@include grid-break($grid-desktop) {\A 37: 		width: 16.667%;\A 38: 	}\A 39: }\A 40: \A 41: .column-2-of-6 {"; }
+  content: "Error: Undefined mixin 'grid-break'.\A         on line 27 of /Users/T/Documents/projects/hej-project/static/scss/grid.scss, in `grid-break'\A         from line 27 of /Users/T/Documents/projects/hej-project/static/scss/grid.scss\A \A 22: .container--half {\A 23: 	width: 100%;\A 24: 	margin: 0 auto;\A 25: 	text-align: center;\A 26: 	\A 27: 	@include grid-break($grid-max) {\A 28: 		width: 50%;\A 29: 	}\A 30: }\A 31: \A 32: .column-1-of-6,"; }
