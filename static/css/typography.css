@@ -1,0 +1,145 @@
+@charset "UTF-8";
+/********** NICE ***************/
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+@font-face {
+  font-family: 'MuseoSlab-500';
+  src: url("webfonts/2EAF0F_0_0.eot");
+  src: url("webfonts/2EAF0F_0_0.eot?#iefix") format("embedded-opentype"), url("webfonts/2EAF0F_0_0.woff2") format("woff2"), url("webfonts/2EAF0F_0_0.woff") format("woff"), url("webfonts/2EAF0F_0_0.ttf") format("truetype");
+}
+/* line 31, ../scss/typography.scss */
+p {
+  font-family: 'Monserrat', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-align: left;
+  line-height: 1.3;
+  color: #2F312E;
+}
+@media screen and (min-width: 800px) {
+  /* line 31, ../scss/typography.scss */
+  p {
+    margin: auto 2em;
+    font-size: 18px;
+  }
+}
+
+/* line 45, ../scss/typography.scss */
+h1 {
+  font-family: MuseoSlab-500, sans-serif;
+  font-weight: 700;
+  font-size: 2em;
+  text-align: center;
+  color: #000000;
+  margin: 0.2em 0 1em;
+}
+@media screen and (min-width: 800px) {
+  /* line 45, ../scss/typography.scss */
+  h1 {
+    font-size: 3em;
+  }
+}
+/* line 57, ../scss/typography.scss */
+h1:after {
+  content: "";
+  display: block;
+  width: 10%;
+  border: 1px solid #8BB632;
+  margin: 20px auto;
+}
+
+/* line 66, ../scss/typography.scss */
+h2 {
+  font-family: 'Vollkorn', serif;
+  font-weight: 400;
+  font-size: 1.7em;
+  color: #000000;
+}
+@media screen and (min-width: 800px) {
+  /* line 66, ../scss/typography.scss */
+  h2 {
+    font-size: 2.3em;
+  }
+}
+
+/* line 78, ../scss/typography.scss */
+h3 {
+  text-align: left;
+  font-size: 1em;
+  text-transform: uppercase;
+  font-family: 'Vollkorn', serif;
+  margin: 0 2em 0.5em;
+  color: #8BB632;
+}
+
+/* line 87, ../scss/typography.scss */
+sub {
+  font-family: MuseoSlab-500, sans-serif;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  color: #888888;
+  bottom: 0;
+  position: absolute;
+  margin-bottom: -10px;
+  right: 0;
+}
+
+/* line 99, ../scss/typography.scss */
+p span  {
+  color: #8BB632;
+}
+/* line 102, ../scss/typography.scss */
+p a {
+  color: #8BB632;
+}
+
+@media screen and (min-width: 800px) {
+  /* line 107, ../scss/typography.scss */
+  .description {
+    margin: 0 1.5em;
+    padding: 0 20px;
+  }
+}
+
+/* line 114, ../scss/typography.scss */
+.centered--text,
+.description--centered {
+  text-align: center;
+}
+
+/* line 119, ../scss/typography.scss */
+.description--intro {
+  font-size: 1.3em;
+  margin-bottom: 1em;
+}
+
+/* line 124, ../scss/typography.scss */
+.quote {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  display: block;
+  float: left;
+  margin: 10px 0;
+  padding: 0 12px;
+  position: relative;
+  display: table;
+  float: none;
+  height: 180px;
+}
+/* line 131, ../scss/typography.scss */
+.quote h2 {
+  display: table-cell;
+  font-size: 1.5em;
+  margin: 0 auto;
+  max-width: 50%;
+  text-align: center;
+  vertical-align: middle;
+  color: #F1F1F1;
+}
+@media screen and (min-width: 800px) {
+  /* line 131, ../scss/typography.scss */
+  .quote h2 {
+    font-size: 2em;
+  }
+}

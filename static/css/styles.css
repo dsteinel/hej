@@ -1,0 +1,652 @@
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+/* line 5, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 2, ../scss/main.scss */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* line 8, ../scss/main.scss */
+html {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 14, ../scss/main.scss */
+body {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 20, ../scss/main.scss */
+ul {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  display: block;
+  float: left;
+  margin: 10px 0;
+  padding: 0 12px;
+  position: relative;
+}
+
+/* line 25, ../scss/main.scss */
+li {
+  text-decoration: none;
+}
+@media screen and (min-width: 800px) {
+  /* line 25, ../scss/main.scss */
+  li {
+    padding: 1.5em;
+  }
+}
+
+/* line 33, ../scss/main.scss */
+img {
+  width: 100%;
+  display: block;
+}
+
+/* line 38, ../scss/main.scss */
+.header {
+  -moz-transition: all, 1s;
+  -o-transition: all, 1s;
+  -webkit-transition: all, 1s;
+  transition: all, 1s;
+  position: relative;
+  height: 100vh;
+  background-image: url("/static/img/hej-mask-longer-back.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-color: #000000;
+}
+/* line 47, ../scss/main.scss */
+.header > div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+/* line 53, ../scss/main.scss */
+.header h1,
+.header h2 {
+  text-transform: uppercase;
+  text-align: left;
+  color: #FFF;
+}
+/* line 59, ../scss/main.scss */
+.header h1:after,
+.header h2:after {
+  display: none;
+}
+/* line 64, ../scss/main.scss */
+.header img {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  width: 100vw;
+  height: auto;
+}
+
+/* line 73, ../scss/main.scss */
+.main-container {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  display: block;
+  float: left;
+  margin: 10px 0;
+  padding: 0 12px;
+  position: relative;
+}
+
+/* line 78, ../scss/main.scss */
+.container {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  display: block;
+  float: left;
+  margin: 10px 0;
+  padding: 0 12px;
+  padding: 3em;
+  background-color: #FFFFFF;
+  text-align: center;
+}
+
+/* line 85, ../scss/main.scss */
+.container--connecting {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  display: block;
+  float: left;
+  margin: 10px 0;
+  padding: 0 12px;
+  background-color: #FFFFFF;
+  text-align: center;
+}
+@media screen and (min-width: 650px) {
+  /* line 85, ../scss/main.scss */
+  .container--connecting {
+    padding: 0 3em 0;
+  }
+}
+
+/* line 95, ../scss/main.scss */
+.container--following {
+  -moz-transition: all, 0.7s;
+  -o-transition: all, 0.7s;
+  -webkit-transition: all, 0.7s;
+  transition: all, 0.7s;
+}
+@media screen and (min-width: 800px) {
+  /* line 95, ../scss/main.scss */
+  .container--following {
+    padding: 3em;
+  }
+}
+/* line 102, ../scss/main.scss */
+.container--following .hej-no-touching,
+.container--following .hej-touching {
+  -moz-transition: all, 2s;
+  -o-transition: all, 2s;
+  -webkit-transition: all, 2s;
+  transition: all, 2s;
+  margin: 0 auto;
+  text-align: center;
+}
+/* line 108, ../scss/main.scss */
+.container--following .hej-no-touching > div,
+.container--following .hej-touching > div {
+  margin: 0;
+}
+/* line 112, ../scss/main.scss */
+.container--following .hej-no-touching p,
+.container--following .hej-touching p {
+  text-align: left;
+  padding-left: 20px;
+}
+/* line 117, ../scss/main.scss */
+.container--following .hej-no-touching .column-2-of-6,
+.container--following .hej-touching .column-2-of-6 {
+  display: inline-block;
+}
+
+/* line 123, ../scss/main.scss */
+.hej-no-touching,
+.hej-touching {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+}
+/* line 127, ../scss/main.scss */
+.hej-no-touching.animate--left,
+.hej-touching.animate--left {
+  -moz-transition: all, 2s;
+  -o-transition: all, 2s;
+  -webkit-transition: all, 2s;
+  transition: all, 2s;
+  text-align: left;
+}
+/* line 132, ../scss/main.scss */
+.hej-no-touching.hide,
+.hej-touching.hide {
+  display: none;
+}
+
+/* line 137, ../scss/main.scss */
+.hej-sneak-preview {
+  -moz-transition: all 2s;
+  -o-transition: all 2s;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+  margin-top: 1em;
+}
+/* line 141, ../scss/main.scss */
+.hej-sneak-preview > ul {
+  text-align: center;
+}
+/* line 147, ../scss/main.scss */
+.hej-sneak-preview .hej-description-steps > li > img {
+  -moz-transition: left 1s;
+  -o-transition: left 1s;
+  -webkit-transition: left 1s;
+  transition: left 1s;
+  margin: 3em 0 2em;
+  left: -100%;
+  max-width: 223px;
+}
+@media screen and (min-width: 800px) {
+  /* line 147, ../scss/main.scss */
+  .hej-sneak-preview .hej-description-steps > li > img {
+    margin: 0;
+  }
+}
+
+/* line 163, ../scss/main.scss */
+.take-care-of-each-other p {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 50%;
+  display: block;
+  float: left;
+  margin: 10px 0;
+  padding: 0 12px;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  margin: 0 auto;
+  padding: 2em 0;
+  float: inherit;
+}
+
+/* line 172, ../scss/main.scss */
+.floating-gallery {
+  margin: 0 0 3em;
+}
+/* line 175, ../scss/main.scss */
+.floating-gallery p {
+  margin-bottom: 1.5em;
+}
+/* line 179, ../scss/main.scss */
+.floating-gallery.column-6-of-6 {
+  width: 100%;
+}
+@media screen and (min-width: 800px) {
+  /* line 179, ../scss/main.scss */
+  .floating-gallery.column-6-of-6 {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  /* line 179, ../scss/main.scss */
+  .floating-gallery.column-6-of-6 {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  /* line 190, ../scss/main.scss */
+  .floating-gallery.column-6-of-6 > div {
+    float: left;
+  }
+}
+
+/* line 198, ../scss/main.scss */
+footer {
+  font-size: 0.9em;
+}
+/* line 201, ../scss/main.scss */
+footer.container {
+  text-align: left;
+}
+
+/* line 1, ../scss/background-transition.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 3, ../scss/background-transition.scss */
+body {
+  transition: background 1s ease;
+}
+
+/* line 9, ../scss/background-transition.scss */
+.slide .inside {
+  display: table;
+  height: 100%;
+  width: 100%;
+  padding: 0 3em;
+}
+/* line 15, ../scss/background-transition.scss */
+.slide .inside p {
+  display: table-cell;
+  width: 100%;
+  clear: both;
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* line 4, ../scss/grid.scss */
+.description--row {
+  display: block;
+  width: 100%;
+  padding: 2em 0;
+  text-align: center;
+}
+/* line 10, ../scss/grid.scss */
+.description--row h1 {
+  display: block;
+  position: relative;
+}
+/* line 15, ../scss/grid.scss */
+.description--row img {
+  width: 100%;
+  height: auto;
+  margin: 1.2em auto;
+}
+
+/* line 22, ../scss/grid.scss */
+.container--half {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+@media screen and (min-width: 1000px) {
+  /* line 22, ../scss/grid.scss */
+  .container--half {
+    width: 50%;
+  }
+}
+
+/* line 32, ../scss/grid.scss */
+.column-1-of-6,
+.column-2-of-6,
+.column-3-of-6,
+.column-4-of-6,
+.column-5-of-6,
+.column-6-of-6 {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  position: relative;
+  width: 100%;
+}
+
+@media screen and (min-width: 800px) {
+  /* line 43, ../scss/grid.scss */
+  .column-1-of-6 {
+    position: relative;
+    margin: 0 auto;
+    display: block;
+    width: 16.667%;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  /* line 52, ../scss/grid.scss */
+  .column-2-of-6 {
+    width: 33.333%;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  /* line 58, ../scss/grid.scss */
+  .column-3-of-6 {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  /* line 64, ../scss/grid.scss */
+  .column-4-of-6 {
+    width: 66.6667%;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  /* line 70, ../scss/grid.scss */
+  .column-5-of-6 {
+    width: 83.3333%;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  /* line 76, ../scss/grid.scss */
+  .column-6-of-6 {
+    width: 100%;
+  }
+}
+
+/* line 82, ../scss/grid.scss */
+.grid-padding-top-bottom {
+  margin: 1.5em 0;
+}
+
+/* line 86, ../scss/grid.scss */
+.grid-gutter {
+  padding: 1.5em;
+}
+
+/* line 90, ../scss/grid.scss */
+.grid-gutter-s {
+  padding: 1em 0;
+}
+@media screen and (min-width: 800px) {
+  /* line 90, ../scss/grid.scss */
+  .grid-gutter-s {
+    padding: 1em;
+  }
+}
+
+/* line 98, ../scss/grid.scss */
+.image-gallery {
+  width: 80%;
+}
+@media screen and (min-width: 1000px) {
+  /* line 98, ../scss/grid.scss */
+  .image-gallery {
+    width: 49%;
+  }
+}
+
+/********** NICE ***************/
+@font-face {
+  font-family: 'MuseoSlab-500';
+  src: url("webfonts/2EAF0F_0_0.eot");
+  src: url("webfonts/2EAF0F_0_0.eot?#iefix") format("embedded-opentype"), url("webfonts/2EAF0F_0_0.woff2") format("woff2"), url("webfonts/2EAF0F_0_0.woff") format("woff"), url("webfonts/2EAF0F_0_0.ttf") format("truetype");
+}
+/* line 31, ../scss/typography.scss */
+p {
+  font-family: 'Monserrat', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-align: left;
+  line-height: 1.3;
+  color: #2F312E;
+}
+@media screen and (min-width: 800px) {
+  /* line 31, ../scss/typography.scss */
+  p {
+    margin: auto 2em;
+    font-size: 18px;
+  }
+}
+
+/* line 45, ../scss/typography.scss */
+h1 {
+  font-family: MuseoSlab-500, sans-serif;
+  font-weight: 700;
+  font-size: 2em;
+  text-align: center;
+  color: #000000;
+  margin: 0.2em 0 1em;
+}
+@media screen and (min-width: 800px) {
+  /* line 45, ../scss/typography.scss */
+  h1 {
+    font-size: 3em;
+  }
+}
+/* line 57, ../scss/typography.scss */
+h1:after {
+  content: "";
+  display: block;
+  width: 10%;
+  border: 1px solid #8BB632;
+  margin: 20px auto;
+}
+
+/* line 66, ../scss/typography.scss */
+h2 {
+  font-family: 'Vollkorn', serif;
+  font-weight: 400;
+  font-size: 1.7em;
+  color: #000000;
+}
+@media screen and (min-width: 800px) {
+  /* line 66, ../scss/typography.scss */
+  h2 {
+    font-size: 2.3em;
+  }
+}
+
+/* line 78, ../scss/typography.scss */
+h3 {
+  text-align: left;
+  font-size: 1em;
+  text-transform: uppercase;
+  font-family: 'Vollkorn', serif;
+  margin: 0 2em 0.5em;
+  color: #8BB632;
+}
+
+/* line 87, ../scss/typography.scss */
+sub {
+  font-family: MuseoSlab-500, sans-serif;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  color: #888888;
+  bottom: 0;
+  position: absolute;
+  margin-bottom: -10px;
+  right: 0;
+}
+
+/* line 99, ../scss/typography.scss */
+p span  {
+  color: #8BB632;
+}
+/* line 102, ../scss/typography.scss */
+p a {
+  color: #8BB632;
+}
+
+@media screen and (min-width: 800px) {
+  /* line 107, ../scss/typography.scss */
+  .description {
+    margin: 0 1.5em;
+    padding: 0 20px;
+  }
+}
+
+/* line 114, ../scss/typography.scss */
+.centered--text,
+.description--centered {
+  text-align: center;
+}
+
+/* line 119, ../scss/typography.scss */
+.description--intro {
+  font-size: 1.3em;
+  margin-bottom: 1em;
+}
+
+/* line 124, ../scss/typography.scss */
+.quote {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  display: block;
+  float: left;
+  margin: 10px 0;
+  padding: 0 12px;
+  position: relative;
+  display: table;
+  float: none;
+  height: 180px;
+}
+/* line 131, ../scss/typography.scss */
+.quote h2 {
+  display: table-cell;
+  font-size: 1.5em;
+  margin: 0 auto;
+  max-width: 50%;
+  text-align: center;
+  vertical-align: middle;
+  color: #F1F1F1;
+}
+@media screen and (min-width: 800px) {
+  /* line 131, ../scss/typography.scss */
+  .quote h2 {
+    font-size: 2em;
+  }
+}
