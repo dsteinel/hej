@@ -1,0 +1,203 @@
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+}
+
+ul {
+	@include grid(12);
+	position: relative;
+}
+
+li {
+	text-decoration: none;
+
+	@include grid-break($grid-desktop) {
+		padding: 1.5em;
+	}
+}
+
+img {
+	width: 100%;
+	display: block;
+}
+
+.header {
+	transition: all, 1s;
+	position: relative;
+	height: 100vh;
+	background-image: url('/img/hej-mask-longer-back.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-color: #000000;
+
+	> div {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+	}
+
+	h1,
+	h2 {
+		text-transform: uppercase;
+		text-align: left;
+		color: #FFF;
+
+		&:after {
+			display: none;
+		}
+	}
+
+	img {
+		position: relative;
+		display: block;
+		margin: 0 auto;
+		width: 100vw;
+		height: auto;
+	}
+}
+
+.main-container {
+	@include grid(12);
+	position: relative;
+}
+
+.container {
+	@include grid(12);
+	padding: 3em;
+	background-color: $container-background-color;
+	text-align: center;
+}
+
+.container--connecting {
+	@include grid(12);
+	background-color: $container-background-color;
+	text-align: center;
+
+	@include grid-break($grid-break) {
+		padding: 0 3em 0;
+	}
+}
+
+.container--following {
+	transition: all, 0.7s;
+
+	@include grid-break($grid-desktop) {
+		padding: 3em;
+	}
+
+	.hej-no-touching,
+	.hej-touching {
+		transition: all, 2s;
+		margin: 0 auto;
+		text-align: center;
+
+		> div {
+			margin: 0;
+		}
+
+		p {
+			text-align: left;
+			padding-left: 20px;
+		}
+
+		.column-2-of-6 {
+			display: inline-block;
+		}
+	}
+}
+
+.hej-no-touching,
+.hej-touching {
+	display: inline-block;
+
+	&.animate--left {
+		transition: all, 2s;
+		text-align: left;
+	}
+
+	&.hide {
+		display: none;
+	}
+}
+
+.hej-sneak-preview {
+	transition: all 2s;
+	margin-top: 1em;
+
+	> ul {
+		text-align: center;
+	}
+
+	.hej-description-steps {
+		> li {
+			> img {
+				transition: left 1s;
+				margin: 3em 0 2em;
+				left: 0;
+				max-width: 223px;
+
+				@include grid-break($grid-desktop) {
+					margin: 0;
+				}
+			}
+		}
+	}
+}
+
+.take-care-of-each-other {
+
+	p {
+		@include grid(6);
+		display: inline-block;
+		margin: 0 auto;
+		padding: $small-gutter 0;
+		float: inherit;
+	}
+}
+
+.floating-gallery {
+	margin: 0 0 3em;
+
+	p {
+		margin-bottom: 1.5em;
+	}
+
+	&.column-6-of-6 {
+		width: 100%;
+
+		@include grid-break($grid-desktop){
+			width: 80%;
+		}
+
+		@include grid-break($grid-max){
+			width: 70%;
+		}
+
+		> div {
+			@include grid-break($grid-max){
+				float: left;
+			}
+		}
+	}
+}
+
+footer {
+	font-size: 0.9em;
+
+	&.container {
+		text-align: left;
+	}
+}

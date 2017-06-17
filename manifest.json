@@ -1,0 +1,25 @@
+{
+  "short_name": "dsteinel",
+  "name": "Dimitri Steinel",
+  "icons": [
+    {
+      "src": "favicon-48x48.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "favicon-96x96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "favicon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "display": "standalone",
+  "theme_color": "#FB1",
+  "background_color": "#FFFFFF",
+  "start_url": "index.html?launcher=true"
+}
